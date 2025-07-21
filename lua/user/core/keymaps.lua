@@ -44,16 +44,16 @@ keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
 
 -- nvim-tree
-keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>") -- open nvim-tree file explorer
-keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>") -- open nvim-tree on current file
-keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>") -- refresh nvim-tree
-keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>") -- collapse
+keymap.set("n", "<leader>ee", "<cmd>Neotree toggle<CR>") -- open nvim-tree file explorer
+keymap.set("n", "<leader>ef", "<cmd>Neotree reveal<CR>") -- open nvim-tree on current file
+-- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>") -- refresh nvim-tree
+-- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>") -- collapse
 
 -- fuzzy-finder
 -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
+keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 
 -- map go to next and prev buffer
