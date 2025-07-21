@@ -6,6 +6,7 @@ local keymap = vim.keymap
 -- make cursor move along the page when scrolling
 keymap.set("n", "<C-y>", "k<C-y>")
 keymap.set("n", "<C-e>", "j<C-e>")
+
 -- moving line
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -56,6 +57,13 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 
+-- oil
+keymap.set("n", "<leader>oo", "<CMD>Oil<CR>", { silent = true })
+keymap.set("n", "<leader>ol", "<CMD>AerialToggle right<CR>")
+-- keys = { -- Example mapping to toggle outline
+--   { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+-- },
+
 -- map go to next and prev buffer
 keymap.set("n", "[b", ":bprev<CR>", { silent = true })
 keymap.set("n", "]b", ":bnext<CR>", { silent = true })
@@ -73,3 +81,8 @@ keymap.set("n", "<leader>fd", "", {
 		end
 	end,
 })
+
+-- treesitter node path
+local utils = require("user.core.utils")
+keymap.set('n', '<leader>np', utils.get_node_path)
+keymap.set('n', '<leader>ni', utils.i18n_helper)
