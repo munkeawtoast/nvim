@@ -7,8 +7,8 @@ return {
 	end,
 	opts = {
 		theme = {
-			variant = "fall", -- 'winter'|'fall'|'spring'|'summer'
 			accent = "green",
+			variant = "winter", -- 'winter'|'fall'|'spring'|'summer'
 		},
 		editor = {
 			transparent_background = false,
