@@ -50,6 +50,9 @@ keymap.set("n", "<leader>ef", "<cmd>Neotree reveal<CR>") -- open nvim-tree on cu
 -- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>") -- refresh nvim-tree
 -- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>") -- collapse
 
+-- dbui
+keymap.set("n", "<leader>db", "<cmd>DBUIToggle<CR>") -- open nvim-tree on current file
+
 -- fuzzy-finder
 -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope smart_open hidden=true<cr>")
@@ -84,5 +87,5 @@ keymap.set("n", "<leader>fd", "", {
 
 -- treesitter node path
 local utils = require("user.core.utils")
-keymap.set('n', '<leader>np', utils.get_node_path)
-keymap.set('n', '<leader>ni', utils.i18n_helper)
+keymap.set("n", "<leader>np", utils.get_node_path)
+keymap.set("n", "<leader>ni", utils.i18n_helper)
