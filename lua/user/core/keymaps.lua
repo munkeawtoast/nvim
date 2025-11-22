@@ -55,7 +55,7 @@ keymap.set("n", "<leader>db", "<cmd>DBUIToggle<CR>") -- open nvim-tree on curren
 
 -- fuzzy-finder
 -- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-keymap.set("n", "<leader>ff", "<cmd>Telescope smart_open hidden=true<cr>")
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
