@@ -12,6 +12,16 @@ return {
 	---@type neotree.Config?
 	opts = {
 		commands = {
+			copy_rel_path = function(state)
+				local node = state.tree:get_node()
+				if not node then
+					return
+				end
+				local path = node.path or node:get_id()
+				local rel = vim.fn.fnamemodify(path, ":.")
+				vim.fn.setreg("+", rel) -- system clipboard
+				vim.notify("Copied: " .. rel)
+			end,
 			system_open = function(state)
 				vim.ui.open(state.tree:get_node():get_id())
 			end,
@@ -45,6 +55,8 @@ return {
 		},
 		window = {
 			mappings = {
+				i = "copy_rel_path",
+				I = "show_file_details",
 				O = "system_open",
 				-- Y = "copy_selector",
 				h = "parent_or_close",
