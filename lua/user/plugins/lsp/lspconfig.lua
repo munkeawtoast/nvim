@@ -46,6 +46,9 @@ return {
 				opts.desc = "Show LSP type definitions"
 				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
+				opts.desc = "Show LSP type definitions"
+				keymap.set("n", "gm", "<cmd>Telescope marks theme=ivy<CR>", opts) -- show lsp type definitions
+
 				opts.desc = "See available code actions"
 				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
