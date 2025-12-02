@@ -53,72 +53,72 @@
 -- 		vim.cmd.colorscheme("fluoromachine")
 -- 	end,
 -- }
-return {
-	"0xstepit/flow.nvim",
-	lazy = false,
-	priority = 1000,
-	tag = "v2.0.1",
-	opts = {
-		theme = {
-			style = "dark", --  "dark" | "light"
-			contrast = "high", -- "default" | "high"
-			transparent = true, -- true | false
-		},
-		colors = {
-			mode = "default", -- "default" | "dark" | "light"
-			fluo = "orange", -- "pink" | "cyan" | "yellow" | "orange" | "green"
-			custom = {
-				saturation = "", -- "" | string representing an integer between 0 and 100
-				light = "", -- "" | string representing an integer between 0 and 100
-			},
-		},
-		ui = {
-			borders = "fluo", -- "theme" | "inverse" | "fluo" | "none"
-			aggressive_spell = true, -- true | false
-		},
-	},
-	config = function(_, opts)
-		require("flow").setup(opts)
-		vim.cmd("colorscheme flow")
-	end,
-}
-
 -- return {
--- 	"everviolet/nvim",
--- 	name = "evergarden",
--- 	priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
--- 	config = function()
--- 		vim.cmd.colorscheme("evergarden")
--- 	end,
+-- 	"0xstepit/flow.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	tag = "v2.0.1",
 -- 	opts = {
 -- 		theme = {
--- 			variant = "winter", -- 'winter'|'fall'|'spring'|'summer'
--- 			accent = "crust",
+-- 			style = "dark", --  "dark" | "light"
+-- 			contrast = "default", -- "default" | "high"
+-- 			transparent = true, -- true | false
 -- 		},
--- 		editor = {
--- 			transparent_background = true,
--- 			override_terminal = true,
--- 			sign = { color = "none" },
--- 			float = {
--- 				color = "mantle",
--- 				solid_border = false,
--- 			},
--- 			completion = {
--- 				color = "crust",
+-- 		colors = {
+-- 			mode = "default", -- "default" | "dark" | "light"
+-- 			fluo = "orange", -- "pink" | "cyan" | "yellow" | "orange" | "green"
+-- 			custom = {
+-- 				saturation = "", -- "" | string representing an integer between 0 and 100
+-- 				light = "", -- "" | string representing an integer between 0 and 100
 -- 			},
 -- 		},
--- 		style = {
--- 			tabline = { "reverse" },
--- 			search = { "italic", "reverse" },
--- 			incsearch = { "italic", "reverse" },
--- 			types = { "italic" },
--- 			keyword = { "italic" },
--- 			comment = { "italic" },
+-- 		ui = {
+-- 			borders = "fluo", -- "theme" | "inverse" | "fluo" | "none"
+-- 			aggressive_spell = true, -- true | false
 -- 		},
--- 		overrides = {},
--- 		color_overrides = {},
 -- 	},
+-- 	config = function(_, opts)
+-- 		require("flow").setup(opts)
+-- 		vim.cmd("colorscheme flow")
+-- 	end,
 -- }
+
+return {
+	"everviolet/nvim",
+	name = "evergarden",
+	priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+	config = function()
+		-- vim.cmd.colorscheme("evergarden")
+	end,
+	opts = {
+		theme = {
+			variant = "winter", -- 'winter'|'fall'|'spring'|'summer'
+			accent = "crust",
+		},
+		editor = {
+			transparent_background = false,
+			override_terminal = true,
+			sign = { color = "none" },
+			float = {
+				color = "mantle",
+				solid_border = false,
+			},
+			completion = {
+				color = "crust",
+			},
+		},
+		style = {
+			tabline = { "reverse" },
+			search = { "italic", "reverse" },
+			incsearch = { "italic", "reverse" },
+			types = { "italic" },
+			keyword = { "italic" },
+			comment = { "italic" },
+		},
+		overrides = {},
+		color_overrides = {},
+	},
+}
 -- return {
 -- 	"sainnhe/sonokai",
 -- 	lazy = false,

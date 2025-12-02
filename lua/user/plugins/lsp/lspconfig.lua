@@ -55,6 +55,9 @@ return {
 				opts.desc = "Smart rename"
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
+				opts.desc = "Show workspace diagnostics"
+				keymap.set("n", "<leader>gP", "<cmd>Telescope workspace_diagnostics<CR>", opts) -- show  diagnostics for file
+
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
@@ -88,7 +91,7 @@ return {
 		-- 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		-- end
 
-		mason_lspconfig.setup_handlers({
+		local handlers = {
 			-- default handler for installed servers
 			function(server_name)
 				lspconfig[server_name].setup({
@@ -121,6 +124,14 @@ return {
 					},
 				})
 			end,
-		})
+		}
+
+		-- mason-lspconfig removed setup_handlers in recent releases; fall back to the
+		-- `handlers` option on setup when it is unavailable to avoid runtime errors.
+		if mason_lspconfig.setup_handlers then
+			mason_lspconfig.setup_handlers(handlers)
+		else
+			mason_lspconfig.setup({ handlers = handlers })
+		end
 	end,
 }

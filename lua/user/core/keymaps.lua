@@ -60,6 +60,8 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 
+keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<cr>")
+
 -- oil
 keymap.set("n", "<leader>oo", "<CMD>Oil<CR>", { silent = true })
 keymap.set("n", "<leader>ol", "<CMD>AerialToggle right<CR>")
