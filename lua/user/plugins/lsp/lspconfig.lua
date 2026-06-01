@@ -124,6 +124,7 @@ return {
 					},
 				})
 			end,
+			["jdtls"] = function() end,
 		}
 
 		-- mason-lspconfig removed setup_handlers in recent releases; fall back to the

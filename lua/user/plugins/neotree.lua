@@ -49,6 +49,16 @@ return {
 					state.commands.open(state)
 				end
 			end,
+			open_and_diff = function(state)
+				local node = state.tree:get_node()
+				if not node or node.type ~= "file" then
+					return
+				end
+				state.commands.open(state)
+				vim.schedule(function()
+					vim.cmd("Gitsigns diffthis")
+				end)
+			end,
 		},
 		filesystem = {
 			follow_current_file = { enabled = true },
@@ -61,6 +71,7 @@ return {
 				-- Y = "copy_selector",
 				h = "parent_or_close",
 				l = "child_or_open",
+				b = "open_and_diff",
 			},
 		},
 	},

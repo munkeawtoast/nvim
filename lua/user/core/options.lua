@@ -59,3 +59,6 @@ vim.highlight.priorities.semantic_tokens = 95
 -- opt.shortmess = "a"
 opt.shortmess = "aFWItc"
 -- opt.cmdheight = 2
+
+-- allow project-local config (.nvim.lua)
+opt.exrc = true
